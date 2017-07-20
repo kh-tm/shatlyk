@@ -29,4 +29,4 @@ var tid = setInterval(function() {
     currentSlide = 1;
   }
 }
-, 2000);
+, 5000);
