@@ -31,6 +31,19 @@ a {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+
+.clearfix:after {
+clear: both;
+}
+.clearfix {
+*zoom: 1;
+}
+
 
 
 .header-top {
@@ -939,22 +952,9 @@ span.faq-icon::before {
 
 
 
-
-.page-footer {
-  display: flex;
-
-  height: 4.5em;
-  margin-top: 30px;
-
+span.equipment-icon::before {
+  background-image: url(../images/med.png);
 }
-.page-footer .copyright {
-  margin: auto;
-  color: rgb(0, 0, 0);
-}
-
-
-
-
 .equipment__content {
   display: flex;
   flex-direction: row;
@@ -992,7 +992,6 @@ span.faq-icon::before {
 
   position: relative;
 }
-
 .equipment__description-1,
 .equipment__description-2,
 .equipment__description-3,
@@ -1066,6 +1065,35 @@ span.faq-icon::before {
 }
 
 
+
+span.ymaps-icon::before {
+  background-image: url(../images/map.png);
+}
+.ymaps .map-wrapper {
+  width: 100%;
+  height: 650px;
+
+  border-top: 3px #a2cef0	double;
+  border-bottom: 3px #ffb23e	double;
+  box-shadow: 0 3px 20px rgba(87, 87, 87, 0.64);
+}
+
+
+
+
+.page-footer {
+  display: flex;
+
+  height: 4.5em;
+  margin-top: 30px;
+
+}
+.page-footer .copyright {
+  margin: auto;
+  color: rgb(0, 0, 0);
+}
+
+
 /*     БОРДЕР КРАСИВО
 li {
   position: relative;
@@ -1112,3 +1140,253 @@ li::before, li::after {
   border-left-color: #6C8CD5;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.breadcrumbs {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+}
+.breadcrumbs::after {
+  content: "";
+  background-image: url(../images/sky.jpg);
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.breadcrumbs__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  margin: auto;
+}
+.breadcrumbs__item {
+  position: relative;
+  padding: 5px 20px;
+  margin: 0 15px;
+
+  background-color: rgb(255, 255, 255);
+}
+.breadcrumbs__item::before {
+  content: "";
+  border-top: 20px solid rgb(255, 255, 255);
+  border-bottom: 20px solid rgb(255, 255, 255);
+  border-right: 20px solid rgb(255, 255, 255);
+  border-left: 20px solid transparent;
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+.breadcrumbs__item::after {
+  content: "";
+  border-top: 20px solid transparent;
+  border-left: 20px solid rgb(255, 255, 255);
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.breadcrumbs__item__link {
+  color: #2A4480;
+}
+
+
+
+
+.page-about__text {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.page-about__title {
+  font-size: 52px;
+  font-weight: lighter;
+}
+.page-about__paragraph {
+  margin: 12px 0;
+  font-weight: normal;
+  font-size: 1em;
+}
+.page-about__paragraph--strong {
+  padding-left: 35px;
+  border-left: 6px solid rgb(254, 170, 72);
+  color: rgb(0, 0, 0);
+}
+.page-about__subtitle {
+  font-size: 1.8em;
+  font-weight: lighter;
+  margin: 25px 0 10px;
+  color: #c68fa1;
+}
+.page-about__paragraph--center {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 40px;
+  color: #c68fa1;
+}
+
+
+
+
+
+.specialist {
+  max-width: 960px;
+  margin: 30px auto;
+}
+.specialist__top-content {
+  margin-bottom: 30px;
+  display: flex;
+}
+.specialist__info {
+  margin-left: 30px;
+}
+.specialist__photo {
+  width: 300px;
+  height: 400px;
+
+  box-shadow: 0px 23px 15px -15px rgba(0,0,0,0.2);
+}
+.specialist__name {
+  display: block;
+  font-size: 52px;
+  font-weight: lighter;
+  color: rgb(164, 110, 28);
+}
+.specialist__position {
+  display: block;
+  font-size: 1.4em;
+  font-weight: lighter;
+}
+.specialist__e-mail {
+  display: block;
+  font-size: 1.4em;
+  font-weight: lighter;
+  color: rgb(78, 78, 78);
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}
+
+
+
+
+
+
+
+
+
+.doctors {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.doctors__title {
+  display: block;
+  font-size: 52px;
+  font-weight: lighter;
+}
+.doctors__wrapper {
+  margin: 30px 0;
+}
+.doctors__card {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 4px #c2e5ff	double;
+}
+.doctors__card:last-child {
+  border-bottom: none;
+}
+.doctors__info {
+  padding-top: 20px;
+}
+.doctors__photo {
+  width: 250px;
+  height: 330px;
+  margin-right: 30px;
+  float: left;
+
+  box-shadow: 0px 23px 15px -15px rgba(0,0,0,0.2);
+}
+.doctors__name {
+  font-size: 1.8em;
+  font-weight: lighter;
+  color: rgb(164, 110, 28);
+}
+.doctors__description {
+  max-height: 6em;
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+.doctors__see-more {
+  float: right;
+  color: rgb(164, 110, 28);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.work-forms__text {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.work-forms__title {
+  font-size: 52px;
+  font-weight: lighter;
+}
+.work-forms__paragraph {
+  text-indent: 30px;
+  text-align: justify;
+  margin: 12px 0;
+  font-weight: normal;
+  font-size: 1em;
+}
+.work-forms__paragraph--strong {
+  padding-left: 35px;
+  border-left: 6px solid rgb(254, 170, 72);
+  color: rgb(0, 0, 0);
+}
+.work-forms__subtitle {
+  font-size: 1.8em;
+  font-weight: lighter;
+  margin: 25px 0 10px;
+  color: #c68fa1;
+}
+.work-forms__paragraph--center {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 40px;
+  color: #c68fa1;
+}
